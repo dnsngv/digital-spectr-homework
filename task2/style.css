@@ -3,26 +3,30 @@ body {
   flex-flow: column;
 }
 
+.container {
+  width: 1024px;
+  margin: 0 auto;
+}
+
 .block1 {
   background-color: #00ff00;
-  width: 130px;
+  min-width: 130px;
   height: 130px;
 }
 .block2 {
   background-color: #0000ff;
 }
 
-body > div {
+.wrapper {
   border: solid 5px #000;
   padding: 20px;
   margin: 5px auto;
 }
 
 p {
-  font-size: 20px;
+  font-size: 30px;
   margin: 0;
   word-wrap: normal;
-  white-space: nowrap;
 }
 
 ._type1 > .block1 {
@@ -34,11 +38,7 @@ p {
 }
 
 ._type2 {
-  display: inline-flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: stretch;
-  align-content: center;
+  display: flex;
 }
 
 ._type2 > .block2 {
@@ -46,11 +46,8 @@ p {
 }
 
 ._type3 {
-  display: inline-flex;
+  display: flex;
   flex-direction: row-reverse;
-  flex-wrap: wrap;
-  align-items: stretch;
-  align-content: center;
 }
 
 ._type3 > .block2 {
@@ -59,21 +56,18 @@ p {
 }
 
 ._type3 > .block1 {
-  float: right;
-  overflow: hidden;
   margin-left: 25px;
 }
 
 ._type4 {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
+  position: relative;
 }
 
 ._type4 > .block1 {
   position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 ._type4 > .block2 {
@@ -81,15 +75,8 @@ p {
 }
 
 ._type5 {
+  display: inline-table;
   flex-direction: row-reverse;
-  flex-wrap: wrap;
-  align-items: stretch;
-  align-content: center;
-}
-
-._type5 > .block2 {
-  float: left;
-  padding-right: 200px;
 }
 
 ._type5 > .block1 {
@@ -98,11 +85,16 @@ p {
   margin-left: 25px;
 }
 
+._type5 > .block2 {
+  padding-right: 200px;
+  margin-right: 160px;
+}
+
 ._type6 > .block1 {
   position: relative;
   float: left;
-  left: 190px;
-  top: 56px;
+  left: 30%;
+  top: 90px; /* в % не двигается :( */
 }
 
 ._type6 > .block2 {
