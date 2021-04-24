@@ -1,0 +1,61 @@
+@font-face {
+  font-family: "GothamProRegular";
+  src: url("../fonts/GothamProRegular.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/GothamProRegular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "GothamProBold";
+  src: url("../fonts/GothamProBold.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/GothamProBold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "GothamProMedium";
+  src: url("../fonts/GothamProMedium.eot");
+  src: url("../fonts/GothamProMedium.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/GothamProMedium.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Futura New";
+  src: url("../fonts/ftn85.eot");
+  src: url("../fonts/ftn85.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/ftn85.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Futura New Regular";
+  src: url("../fonts/FuturaNewBook-Reg.eot");
+  src: url("../fonts/FuturaNewBook-Reg.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/FuturaNewBook-Reg.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Futura New Medium";
+  src: url("../fonts/FuturaNewMedium-Reg.eot");
+  src: url("../fonts/FuturaNewMedium-Reg.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/FuturaNewMedium-Reg.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Futura Light Regular";
+  src: url("../fonts/FuturaNewLight-Reg.eot");
+  src: url("../fonts/FuturaNewLight-Reg.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/FuturaNewLight-Reg.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 500;
+}
