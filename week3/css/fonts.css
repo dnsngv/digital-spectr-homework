@@ -59,3 +59,22 @@
   font-style: normal;
   font-weight: 500;
 }
+
+@font-face {
+  font-family: "Futura New Heavy Reg";
+  src: url("../fonts/FuturaNewHeavy-Reg.eot");
+  src: url("../fonts/FuturaNewHeavy-Reg.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/FuturaNewHeavy-Reg.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "GothamProNarrow";
+  src: url("../fonts/GothamProNarrow-Bold.eot");
+  src: url("../fonts/GothamProNarrow-Bold.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/GothamProNarrow-Bold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 500;
+}

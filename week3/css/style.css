@@ -2,10 +2,36 @@ body {
   margin: 0;
 }
 
+a {
+  transition: 0.2s;
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  opacity: 0.5;
+}
+
 p {
   font-family: "GothamProMedium";
   font-size: 15px;
   margin: 0;
+}
+
+h2 {
+  font-family: "Futura New Medium";
+  letter-spacing: 0.05em;
+}
+
+h4 {
+  font-family: "GothamProMedium";
+  letter-spacing: 0.1em;
+}
+
+h5 {
+  font-family: "GothamProMedium";
+  font-size: 16px;
+  letter-spacing: 0.1em;
 }
 
 .navigation {
@@ -111,7 +137,7 @@ p {
   font-size: 12px;
   letter-spacing: 0.2em;
   position: absolute;
-  right: 30%;
+  right: 28%;
   z-index: 1;
 }
 
@@ -323,6 +349,7 @@ input::placeholder {
   right: 0;
   transition: 0.2s;
   cursor: pointer;
+  color: #fff;
 }
 
 .justify-content-between > .col-2 > ul > p:hover,
@@ -406,4 +433,270 @@ a:hover {
     flex-direction: row;
     flex-wrap: wrap;
   }
+}
+
+.info-product {
+  margin-top: 13px;
+}
+
+.chair {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 80px;
+  justify-content: center;
+}
+
+.chair-flex {
+  position: relative;
+  width: 49%;
+  background-color: #f3f3f3;
+  background-image: url(../img/336-HFR8_7.png);
+  background-repeat: no-repeat;
+  background-position: right;
+  background-blend-mode: darken;
+  margin: 5px;
+}
+
+.chair-info {
+  position: absolute;
+  top: 7%;
+  left: 7%;
+}
+
+.p1 {
+  font-family: "GothamProMedium";
+  font-size: 32px;
+  width: 50%;
+}
+
+.p2 {
+  font-family: "GothamProRegular";
+  font-size: 15px;
+  opacity: 0.5;
+  width: 40%;
+  margin-top: 26px;
+}
+
+.btn-more {
+  width: 20%;
+  height: 40px;
+  margin-top: 120px;
+  background: linear-gradient(93.8deg, #807fd4 0%, #609ce2 0.01%, #2346ff 100%);
+  box-shadow: 0px 5px 12px rgba(71, 120, 239, 0.6);
+  border-radius: 4px;
+  color: #fff;
+  font-family: "GothamProMedium";
+  font-size: 13px;
+  border: none;
+  cursor: pointer;
+}
+
+.chair-flex:nth-child(3n + 2) {
+  background-color: #fff;
+}
+
+.chair-flex:nth-child(3n) {
+  background-color: #fff;
+}
+
+.about {
+  background-image: url(../img/Ellipse.png);
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-position-y: 20%;
+  background-size: 65%;
+  margin: 60px 0;
+}
+
+.about .row p {
+  font-family: "GothamProRegular";
+  font-size: 16px;
+  line-height: 29px;
+}
+
+.about .col {
+  margin-top: 50px;
+}
+
+.about-more {
+  position: relative;
+  cursor: pointer;
+  position: relative;
+  margin: 40px 0;
+}
+
+.about-more img {
+  position: absolute;
+  top: 37%;
+  right: 15%;
+}
+
+.brand .row {
+  justify-content: center;
+}
+
+.brand .col-lg-2 {
+  padding: 18px 16px;
+}
+
+.heading {
+  font-family: "GothamProBold";
+  font-size: 37px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.reviews-designers .container .col-sm-5 .heading {
+  text-align: left;
+  margin-left: 10%;
+}
+
+.reviews-designers .container .col,
+.col-sm-5 {
+  position: relative;
+}
+
+.reviews-designers .container .col-sm-5 p {
+  color: black;
+}
+
+.reviews-designers .container .col .arrow {
+  position: absolute;
+  top: 30%;
+  left: 100%;
+}
+
+.reviews-designers {
+  background-color: #f7f7f7;
+  padding: 40px 0;
+}
+
+.reviews-designers a {
+  text-decoration: none;
+  color: black;
+}
+
+.arrow {
+  opacity: 0.4;
+}
+
+.arrows {
+  position: absolute;
+  right: 0;
+  top: 10%;
+}
+
+.reviews-designers .container .justify-content-start {
+  margin: 100px 0;
+}
+
+.reviews-designers .col-sm-5 .row .col a p {
+  opacity: 0.4;
+}
+
+.reviews-img img {
+  clip-path: circle(50% at 50% 50%);
+  max-width: 80px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.reviews-info {
+  display: flex;
+}
+
+.reviews-text p {
+  font-family: "Futura New Medium";
+  font-size: 20px;
+  padding-left: 15px;
+}
+
+.reviews-comment {
+  width: 90%;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 50px;
+  border-top-left-radius: 0;
+  margin-top: 20px;
+  box-shadow: -10px 14px 60px rgba(0, 0, 0, 0.07);
+}
+
+.reviews-comment p {
+  color: black;
+  font-size: 16px;
+  font-family: "Futura New Medium";
+  line-height: 23px;
+}
+
+.col.reviews:nth-child(2) {
+  opacity: 0.5;
+}
+
+.carousel {
+  padding: 5px;
+  width: 100%;
+  background-image: url(/week3/img/carousel.png);
+  background-repeat: repeat-x;
+  background-size: 110%;
+  background-position: center;
+  position: relative;
+}
+
+.subscribe {
+  display: flex;
+  background-color: #fff;
+  padding: 30px;
+  box-shadow: -20px 4px 54px rgba(0, 0, 0, 0.25);
+  position: absolute;
+  top: 25%;
+  left: 15%;
+  border-radius: 6px;
+  align-items: center;
+}
+
+.subscribe .col a {
+  text-decoration: none;
+  color: black;
+}
+
+.btn-subs {
+  height: 40px;
+  background: linear-gradient(93.8deg, #807fd4 0%, #609ce2 0.01%, #2346ff 100%);
+  box-shadow: 0px 5px 12px rgba(71, 120, 239, 0.6);
+  border-radius: 4px;
+  color: #fff;
+  font-family: "GothamProMedium";
+  font-size: 13px;
+  border: none;
+  padding: 0 30px;
+  cursor: pointer;
+}
+
+.back-text {
+  font-family: "GothamProNarrow";
+  font-size: 800px;
+  color: #fff;
+  background-color: #f5f5f5;
+  overflow: hidden;
+  text-overflow: clip;
+}
+
+.slider {
+  display: flex;
+}
+
+.slider .row .col img {
+  background: none;
+}
+
+.slider .row .col p {
+  font-family: "GothamProMedium";
+  font-size: 60px;
+}
+
+.about-more p {
+  transition: 0.2s;
+}
+
+.about-more p:hover {
+  opacity: 0.5;
 }
