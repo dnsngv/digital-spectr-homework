@@ -444,6 +444,8 @@ a:hover {
   flex-wrap: wrap;
   margin-top: 80px;
   justify-content: center;
+  max-width: 2000px;
+  margin: 80px auto;
 }
 
 .chair-flex {
@@ -505,7 +507,8 @@ a:hover {
   background-position: center top;
   background-position-y: 20%;
   background-size: 65%;
-  margin: 60px 0;
+  margin: 60px auto;
+  max-width: 2000px;
 }
 
 .about .row p {
@@ -543,12 +546,9 @@ a:hover {
   font-family: "GothamProBold";
   font-size: 37px;
   text-align: center;
-  margin-bottom: 50px;
-}
-
-.reviews-designers .container .col-sm-5 .heading {
+  margin: 50px;
   text-align: left;
-  margin-left: 10%;
+  width: 90%;
 }
 
 .reviews-designers .container .col,
@@ -582,7 +582,7 @@ a:hover {
 
 .arrows {
   position: absolute;
-  right: 0;
+  right: 3%;
   top: 10%;
 }
 
@@ -671,26 +671,124 @@ a:hover {
   cursor: pointer;
 }
 
+.slider {
+  display: flex;
+  position: relative;
+  max-width: 2000px;
+  margin: 0 auto;
+}
+
 .back-text {
   font-family: "GothamProNarrow";
   font-size: 800px;
   color: #fff;
   background-color: #f5f5f5;
   overflow: hidden;
-  text-overflow: clip;
+  line-height: 72%;
 }
 
-.slider {
+.item {
   display: flex;
+  position: absolute;
+  right: 0;
 }
 
-.slider .row .col img {
-  background: none;
+.slide-info {
+  position: absolute;
+  left: 10%;
+  top: 10%;
+}
+
+.slide-info p {
+  font-family: "GothamProMedium";
+  font-size: 69px;
+  letter-spacing: 0.1em;
+  margin-bottom: 20px;
+  width: 80%;
+}
+
+.btn-slider {
+  height: 50px;
+  background: linear-gradient(93.8deg, #807fd4 0%, #609ce2 0.01%, #2346ff 100%);
+  box-shadow: 0px 5px 12px rgba(71, 120, 239, 0.6);
+  border-radius: 4px;
+  color: #fff;
+  font-family: "GothamProMedium";
+  font-size: 13px;
+  border: none;
+  padding: 0 30px;
+  cursor: pointer;
+  margin-top: 50px;
+  display: block;
+  transition: 0.2s;
+}
+
+.btn-slider:hover {
+  opacity: 0.7;
+}
+
+.slide-info span {
+  font-family: "Georgia";
+  font-size: 21px;
+  opacity: 0.7;
 }
 
 .slider .row .col p {
   font-family: "GothamProMedium";
   font-size: 60px;
+}
+
+.slider-pagination {
+  z-index: 2;
+  margin-top: 180px;
+}
+
+.pagination-dots {
+  width: 10px;
+  height: 6px;
+  background-color: #d7e4f4;
+  display: inline-block;
+  border-radius: 2px;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.pagination-dots:hover {
+  background-color: #aeb9c7;
+}
+
+.pagination-dots.active {
+  width: 44px;
+  background-color: #2d54fb;
+}
+
+.pagination-dots.active:hover {
+  width: 44px;
+  background-color: #2141d1;
+}
+
+.slider .item {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 2s;
+  animation-name: fade;
+  animation-duration: 2s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .about-more p {
@@ -699,4 +797,112 @@ a:hover {
 
 .about-more p:hover {
   opacity: 0.5;
+}
+
+/* ssadsa sadsaa sad ads */
+
+.blog-mebel .container .col-sm-5 .heading {
+  text-align: left;
+  margin-left: 10%;
+}
+
+.blog-heading {
+  font-family: "GothamProBold";
+  font-size: 37px;
+  margin: 50px;
+  color: black;
+  letter-spacing: 0.1em;
+  width: 95%;
+}
+
+.blog-mebel .container .col-sm-5 {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.blog-mebel {
+  background-color: #f7f7f7;
+  padding: 40px 0;
+}
+
+.blog-mebel .col-sm-5 a {
+  padding: 0 5px;
+}
+
+.blog-mebel a {
+  text-decoration: none;
+  color: black;
+}
+
+.blog-mebel .container .justify-content-start {
+  margin: 100px 0;
+}
+
+.blog-mebel .col-sm-5 .row .col a p {
+  opacity: 0.4;
+}
+
+.reviews-img img {
+  clip-path: circle(50% at 50% 50%);
+  max-width: 80px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.reviews-info {
+  display: flex;
+}
+
+.reviews-text p {
+  font-family: "Futura New Medium";
+  font-size: 20px;
+  padding-left: 15px;
+}
+
+.reviews-comment {
+  width: 90%;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 50px;
+  border-top-left-radius: 0;
+  margin-top: 20px;
+  box-shadow: -10px 14px 60px rgba(0, 0, 0, 0.07);
+}
+
+.reviews-comment p {
+  color: black;
+  font-size: 16px;
+  font-family: "Futura New Medium";
+  line-height: 23px;
+}
+
+.read {
+  display: flex;
+  margin: 20px 0;
+  padding-top: 40px;
+}
+
+.read p {
+  font-size: 12px;
+  padding-top: 3px;
+}
+
+.read a img {
+  padding: 0 10px;
+}
+
+.blog-mebel .container .row .col-sm {
+  background-color: #fff;
+  padding: 0px;
+  margin: 10px;
+  box-shadow: -30px 24px 84px rgba(0, 0, 0, 0.04);
+}
+
+.blog-mebel .container .row .col-sm img {
+  width: 100%;
+}
+
+.article-info {
+  padding: 5px 15px;
 }

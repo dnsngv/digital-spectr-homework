@@ -71,10 +71,19 @@
 
 @font-face {
   font-family: "GothamProNarrow";
-  src: url("../fonts/GothamProNarrow-Bold.eot");
-  src: url("../fonts/GothamProNarrow-Bold.eot?#iefix")
+  src: url("../fonts/GothamProNarrow-Medium.eot");
+  src: url("../fonts/GothamProNarrow-Medium.eot?#iefix")
       format("embedded-opentype"),
-    url("../fonts/GothamProNarrow-Bold.ttf") format("truetype");
+    url("../fonts/GothamProNarrow-Medium.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Georgia";
+  src: url("../fonts/Georgia-Italic.eot");
+  src: url("../fonts/Georgia-Italic.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Georgia-Italic.ttf") format("truetype");
   font-style: normal;
   font-weight: 500;
 }
