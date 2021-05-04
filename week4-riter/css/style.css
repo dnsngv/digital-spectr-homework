@@ -2,6 +2,13 @@ body {
   margin: 0;
 }
 
+main {
+  background: url(/week4-riter/img/back1.svg) no-repeat,
+    url(/week4-riter/img/back2.svg) no-repeat,
+    url(/week4-riter/img/back3.svg) no-repeat;
+  background-position: right top 66%, left top 15%, left top 73%;
+}
+
 a {
   transition: 0.2s;
   text-decoration: none;
@@ -32,6 +39,27 @@ h5 {
   font-family: "GothamProMedium";
   font-size: 16px;
   letter-spacing: 0.1em;
+}
+
+.font-10px {
+  font-family: "Futura Light Regular";
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.font-10px.chair-font {
+  font-family: "Futura Light Regular";
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  display: block;
+}
+
+.h2-overflow {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .navigation {
@@ -121,6 +149,9 @@ h5 {
   margin-left: 13px;
 }
 
+.cart {
+  max-width: 100px;
+}
 .counter {
   width: 26px;
   height: 17px;
@@ -437,6 +468,37 @@ a:hover {
 
 .info-product {
   margin-top: 13px;
+  opacity: 0.4;
+}
+
+.in-stock {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 85px;
+  height: 20px;
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+
+.chair-cart-name {
+  font-family: "Futura New";
+  font-size: 17px;
+  letter-spacing: 0.2em;
+}
+
+.old-price {
+  font-family: "Futura New Medium";
+  font-size: 14px;
+  text-decoration-line: line-through;
+  opacity: 0.3;
+  padding-left: 11px;
+}
+
+.kolbins {
+  font-family: "Futura Light Regular";
+  font-size: 10px;
 }
 
 .chair {
@@ -479,7 +541,7 @@ a:hover {
   margin-top: 26px;
 }
 
-.btn-more {
+.btn.more {
   width: 20%;
   height: 40px;
   margin-top: 120px;
@@ -551,6 +613,14 @@ a:hover {
   width: 90%;
 }
 
+.heading.about-company {
+  font-family: "GothamProBold";
+  font-size: 37px;
+  text-align: center;
+  margin: 50px;
+  width: 90%;
+}
+
 .reviews-designers .container .col,
 .col-sm-5 {
   position: relative;
@@ -588,10 +658,6 @@ a:hover {
 
 .reviews-designers .container .justify-content-start {
   margin: 100px 0;
-}
-
-.reviews-designers .col-sm-5 .row .col a p {
-  opacity: 0.4;
 }
 
 .reviews-img img {
@@ -658,7 +724,7 @@ a:hover {
   color: black;
 }
 
-.btn-subs {
+.btn.subs {
   height: 40px;
   background: linear-gradient(93.8deg, #807fd4 0%, #609ce2 0.01%, #2346ff 100%);
   box-shadow: 0px 5px 12px rgba(71, 120, 239, 0.6);
@@ -707,7 +773,7 @@ a:hover {
   width: 80%;
 }
 
-.btn-slider {
+.btn.slide {
   height: 50px;
   background: linear-gradient(93.8deg, #807fd4 0%, #609ce2 0.01%, #2346ff 100%);
   box-shadow: 0px 5px 12px rgba(71, 120, 239, 0.6);
@@ -723,7 +789,7 @@ a:hover {
   transition: 0.2s;
 }
 
-.btn-slider:hover {
+.btn.slide:hover {
   opacity: 0.7;
 }
 
@@ -791,15 +857,67 @@ a:hover {
   }
 }
 
-.about-more p {
+.about-more {
   transition: 0.2s;
 }
 
-.about-more p:hover {
+.about-more:hover {
   opacity: 0.5;
 }
 
-/* ssadsa sadsaa sad ads */
+.long-arrow-right {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border-top: 1px solid #000;
+  border-left: 1px solid #000;
+  transform: rotate(135deg);
+  top: 42%;
+  right: 15%;
+}
+
+.long-arrow-right.blog {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border-top: 1px solid #000;
+  border-left: 1px solid #000;
+  transform: rotate(135deg);
+  top: 85%;
+  left: 45%;
+}
+
+.long-arrow-right.blog2 {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border-top: 1px solid #000;
+  border-left: 1px solid #000;
+  transform: rotate(135deg);
+  top: 60%;
+  left: 95%;
+}
+
+.long-arrow-right.reviews {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border-top: 1px solid #000;
+  border-left: 1px solid #000;
+  transform: rotate(135deg);
+  left: 107%;
+}
+
+.long-arrow-right::after {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 45px;
+  background-color: black;
+  transform: rotate(-45deg) translate(15px, 4px);
+  left: 0;
+  top: 0;
+}
 
 .blog-mebel .container .col-sm-5 .heading {
   text-align: left;
@@ -878,6 +996,7 @@ a:hover {
 }
 
 .read {
+  position: relative;
   display: flex;
   margin: 20px 0;
   padding-top: 40px;

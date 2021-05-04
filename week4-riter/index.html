@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/png">
     <link rel="stylesheet" href="css/bootstrap-grid.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/fonts.css">
-    <!-- Без него ошибка ReferenceError: $ is not defined -->
     <script type="text/javascript" src="js/slider.js"></script>
-    <title>Document</title>
+    <title>Denis Neganov</title>
 </head>
 <body>
     <nav class="navigation">
@@ -50,7 +50,7 @@
         <div class="flex-item">
             <div class="cart">
                 <p style="font-size: 10px; opacity: 0.5; text-align: right;">Товаров на сумму</p>
-                <p style="text-align: right;">320 000 Р</p>
+                <p style="text-align: right; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">320 000 Р</p>
             </div>
             <div class="counter">
                 <p>2</p>
@@ -81,7 +81,7 @@
             <div class="slide-info">
                 <p>ОФИСНАЯ МЕБЕЛЬ</p>
                 <span>Новый каталог 2018-2019</span>
-                <button class="btn-slider">ПОДРОБНЕЕ О КАТАЛОГЕ</button>
+                <button class="btn slide">ПОДРОБНЕЕ О КАТАЛОГЕ</button>
                 <div class="slider-pagination">
                     <ul id = "ul-dots">
                         <li class="pagination-dots" id = "dots" onclick="currentSlide(1)"></li>
@@ -92,7 +92,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="item">
+            <div class="item" style="display: block;">
                 <img src="./img/slide-1.png" alt="">
             </div>
 
@@ -142,107 +142,115 @@
         <section class="chair-cart" style="margin-top: 80px;">
             <div class="container">
                 <div class="row">
-                    <article class="col-sm-3" style="box-shadow: -20px 24px 64px #F6F6F6;">
+                    <article class="col-sm-3" style="box-shadow: -20px 24px 64px #F6F6F6; position: relative; background-color: #fff;">
+                        <div class="in-stock"><p class="font-10px">В НАЛИЧИИ</p></div>
                         <a href=""><img src="../week4-riter/img/chair.png" alt="" ></a>
                         <a href="#"><img src="../week4-riter/img/like.png" alt="" style="float: right; cursor: pointer;"></a>
-                        <a href="#" style="text-decoration: none; color:black"><p style="font-family: Futura New ; font-size: 17px; letter-spacing: 0.2em;">СТУЛ КАКОЙ-ТО МАРКИ</p></a>
+                        <a href="#" style="text-decoration: none; color:black"><p class="chair-cart-name">СТУЛ КАКОЙ-ТО МАРКИ</p></a>
                         <div class="info-product">
-                            <p style="font-family: Futura Light Regular; font-size: 10px; opacity:0.4; letter-spacing: 0.1em;">АРТ. 42342347</p>
-                            <p style="font-family: Futura Light Regular; font-size: 10px; opacity:0.4; letter-spacing: 0.1em;">ПРОИЗВОДИТЕЛЬ: <a href=""><b style="font-family: Futura Light Regular; font-size: 10px;">KOLBINS</b></a></p>
+                            <p class="font-10px">АРТ. 42342347</p>
+                            <p class="font-10px chair-font">ПРОИЗВОДИТЕЛЬ: <a href=""><b class="kolbins">KOLBINS</b></a></p>
                         </div>
                         <div class="price">
-                            <h2>152 810 ₽<span style="font-family: Futura New Medium;; font-size: 14px; text-decoration-line: line-through; opacity: 0.3; padding-left: 11px;">432 810 ₽</span></h2>
+                            <h2 class="h2-overflow">152 810 ₽<span class="old-price">432 810 ₽</span></h2>
                         </div>
                     </article>
 
-                    <article class="col-sm-3" style="box-shadow: -20px 24px 64px #F6F6F6;">
+                    <article class="col-sm-3" style="box-shadow: -20px 24px 64px #F6F6F6; position: relative; background-color: #fff;">
+                        <div class="in-stock"><p class="font-10px">В НАЛИЧИИ</p></div>
                         <a href=""><img src="../week4-riter/img/chair.png" alt="" ></a>
                         <a href="#"><img src="../week4-riter/img/like.png" alt="" style="float: right; cursor: pointer;"></a>
-                        <a href="#" style="text-decoration: none; color:black"><p style="font-family: Futura New ; font-size: 17px; letter-spacing: 0.2em;">СТУЛ КАКОЙ-ТО МАРКИ</p></a>
+                        <a href="#" style="text-decoration: none; color:black"><p class="chair-cart-name">СТУЛ КАКОЙ-ТО МАРКИ</p></a>
                         <div class="info-product">
-                            <p style="font-family: Futura Light Regular; font-size: 10px; opacity:0.4; letter-spacing: 0.1em;">АРТ. 42342347</p>
-                            <p style="font-family: Futura Light Regular; font-size: 10px; opacity:0.4; letter-spacing: 0.1em;">ПРОИЗВОДИТЕЛЬ: <a href=""><b style="font-family: Futura Light Regular; font-size: 10px;">KOLBINS</b></a></p>
+                            <p class="font-10px">АРТ. 42342347</p>
+                            <p class="font-10px chair-font">ПРОИЗВОДИТЕЛЬ: <a href=""><b class="kolbins">KOLBINS</b></a></p>
                         </div>
                         <div class="price">
-                            <h2>152 810 ₽<span style="font-family: Futura New Medium;; font-size: 14px; text-decoration-line: line-through; opacity: 0.3; padding-left: 11px;">432 810 ₽</span></h2>
+                            <h2 class="h2-overflow">152 810 ₽<span class="old-price">432 810 ₽</span></h2>
                         </div>
                     </article>
 
-                    <article class="col-sm-3" style="box-shadow: -20px 24px 64px #F6F6F6;">
+                    <article class="col-sm-3" style="box-shadow: -20px 24px 64px #F6F6F6; position: relative; background-color: #fff;">
+                        <div class="in-stock"><p class="font-10px">В НАЛИЧИИ</p></div>
                         <a href=""><img src="../week4-riter/img/chair.png" alt="" ></a>
                         <a href="#"><img src="../week4-riter/img/like.png" alt="" style="float: right; cursor: pointer;"></a>
-                        <a href="#" style="text-decoration: none; color:black"><p style="font-family: Futura New ; font-size: 17px; letter-spacing: 0.2em;">СТУЛ КАКОЙ-ТО МАРКИ</p></a>
+                        <a href="#" style="text-decoration: none; color:black"><p class="chair-cart-name">СТУЛ КАКОЙ-ТО МАРКИ</p></a>
                         <div class="info-product">
-                            <p style="font-family: Futura Light Regular; font-size: 10px; opacity:0.4; letter-spacing: 0.1em;">АРТ. 42342347</p>
-                            <p style="font-family: Futura Light Regular; font-size: 10px; opacity:0.4; letter-spacing: 0.1em;">ПРОИЗВОДИТЕЛЬ: <a href=""><b style="font-family: Futura Light Regular; font-size: 10px;">KOLBINS</b></a></p>
+                            <p class="font-10px">АРТ. 42342347</p>
+                            <p class="font-10px chair-font">ПРОИЗВОДИТЕЛЬ: <a href=""><b class="kolbins">KOLBINS</b></a></p>
                         </div>
                         <div class="price">
-                            <h2>152 810 ₽<span style="font-family: Futura New Medium;; font-size: 14px; text-decoration-line: line-through; opacity: 0.3; padding-left: 11px;">432 810 ₽</span></h2>
+                            <h2 class="h2-overflow">152 810 ₽<span class="old-price">432 810 ₽</span></h2>
                         </div>
                     </article>
 
-                    <article class="col-sm-3" style="box-shadow: -20px 24px 64px #F6F6F6;">
+                    <article class="col-sm-3" style="box-shadow: -20px 24px 64px #F6F6F6; position: relative; background-color: #fff;">
+                        <div class="in-stock"><p class="font-10px">В НАЛИЧИИ</p></div>
                         <a href=""><img src="../week4-riter/img/chair.png" alt="" ></a>
                         <a href="#"><img src="../week4-riter/img/like.png" alt="" style="float: right; cursor: pointer;"></a>
-                        <a href="#" style="text-decoration: none; color:black"><p style="font-family: Futura New ; font-size: 17px; letter-spacing: 0.2em;">СТУЛ КАКОЙ-ТО МАРКИ</p></a>
+                        <a href="#" style="text-decoration: none; color:black"><p class="chair-cart-name">СТУЛ КАКОЙ-ТО МАРКИ</p></a>
                         <div class="info-product">
-                            <p style="font-family: Futura Light Regular; font-size: 10px; opacity:0.4; letter-spacing: 0.1em;">АРТ. 42342347</p>
-                            <p style="font-family: Futura Light Regular; font-size: 10px; opacity:0.4; letter-spacing: 0.1em;">ПРОИЗВОДИТЕЛЬ: <a href=""><b style="font-family: Futura Light Regular; font-size: 10px;">KOLBINS</b></a></p>
+                            <p class="font-10px">АРТ. 42342347</p>
+                            <p class="font-10px chair-font">ПРОИЗВОДИТЕЛЬ: <a href=""><b class="kolbins">KOLBINS</b></a></p>
                         </div>
                         <div class="price">
-                            <h2>152 810 ₽<span style="font-family: Futura New Medium;; font-size: 14px; text-decoration-line: line-through; opacity: 0.3; padding-left: 11px;">432 810 ₽</span></h2>
+                            <h2 class="h2-overflow">152 810 ₽<span class="old-price">432 810 ₽</span></h2>
                         </div>
                     </article>
 
-                    <article class="col-sm-3" style="box-shadow: -20px 24px 64px #F6F6F6;">
+                    <article class="col-sm-3" style="box-shadow: -20px 24px 64px #F6F6F6; position: relative; background-color: #fff;">
+                        <div class="in-stock"><p class="font-10px">В НАЛИЧИИ</p></div>
                         <a href=""><img src="../week4-riter/img/chair.png" alt="" ></a>
                         <a href="#"><img src="../week4-riter/img/like.png" alt="" style="float: right; cursor: pointer;"></a>
-                        <a href="#" style="text-decoration: none; color:black"><p style="font-family: Futura New ; font-size: 17px; letter-spacing: 0.2em;">СТУЛ КАКОЙ-ТО МАРКИ</p></a>
+                        <a href="#" style="text-decoration: none; color:black"><p class="chair-cart-name">СТУЛ КАКОЙ-ТО МАРКИ</p></a>
                         <div class="info-product">
-                            <p style="font-family: Futura Light Regular; font-size: 10px; opacity:0.4; letter-spacing: 0.1em;">АРТ. 42342347</p>
-                            <p style="font-family: Futura Light Regular; font-size: 10px; opacity:0.4; letter-spacing: 0.1em;">ПРОИЗВОДИТЕЛЬ: <a href=""><b style="font-family: Futura Light Regular; font-size: 10px;">KOLBINS</b></a></p>
+                            <p class="font-10px">АРТ. 42342347</p>
+                            <p class="font-10px chair-font">ПРОИЗВОДИТЕЛЬ: <a href=""><b class="kolbins">KOLBINS</b></a></p>
                         </div>
                         <div class="price">
-                            <h2>152 810 ₽<span style="font-family: Futura New Medium;; font-size: 14px; text-decoration-line: line-through; opacity: 0.3; padding-left: 11px;">432 810 ₽</span></h2>
+                            <h2 class="h2-overflow">152 810 ₽<span class="old-price">432 810 ₽</span></h2>
                         </div>
                     </article>
 
-                    <article class="col-sm-3" style="box-shadow: -20px 24px 64px #F6F6F6;">
+                    <article class="col-sm-3" style="box-shadow: -20px 24px 64px #F6F6F6; position: relative; background-color: #fff;">
+                        <div class="in-stock"><p class="font-10px">В НАЛИЧИИ</p></div>
                         <a href=""><img src="../week4-riter/img/chair.png" alt="" ></a>
                         <a href="#"><img src="../week4-riter/img/like.png" alt="" style="float: right; cursor: pointer;"></a>
-                        <a href="#" style="text-decoration: none; color:black"><p style="font-family: Futura New ; font-size: 17px; letter-spacing: 0.2em;">СТУЛ КАКОЙ-ТО МАРКИ</p></a>
+                        <a href="#" style="text-decoration: none; color:black"><p class="chair-cart-name">СТУЛ КАКОЙ-ТО МАРКИ</p></a>
                         <div class="info-product">
-                            <p style="font-family: Futura Light Regular; font-size: 10px; opacity:0.4; letter-spacing: 0.1em;">АРТ. 42342347</p>
-                            <p style="font-family: Futura Light Regular; font-size: 10px; opacity:0.4; letter-spacing: 0.1em;">ПРОИЗВОДИТЕЛЬ: <a href=""><b style="font-family: Futura Light Regular; font-size: 10px;">KOLBINS</b></a></p>
+                            <p class="font-10px">АРТ. 42342347</p>
+                            <p class="font-10px chair-font">ПРОИЗВОДИТЕЛЬ: <a href=""><b class="kolbins">KOLBINS</b></a></p>
                         </div>
                         <div class="price">
-                            <h2>152 810 ₽<span style="font-family: Futura New Medium;; font-size: 14px; text-decoration-line: line-through; opacity: 0.3; padding-left: 11px;">432 810 ₽</span></h2>
+                            <h2 class="h2-overflow">152 810 ₽<span class="old-price">432 810 ₽</span></h2>
                         </div>
                     </article>
 
-                    <article class="col-sm-3" style="box-shadow: -20px 24px 64px #F6F6F6;">
+                    <article class="col-sm-3" style="box-shadow: -20px 24px 64px #F6F6F6; position: relative; background-color: #fff;">
+                        <div class="in-stock"><p class="font-10px">В НАЛИЧИИ</p></div>
                         <a href=""><img src="../week4-riter/img/chair.png" alt="" ></a>
                         <a href="#"><img src="../week4-riter/img/like.png" alt="" style="float: right; cursor: pointer;"></a>
-                        <a href="#" style="text-decoration: none; color:black"><p style="font-family: Futura New ; font-size: 17px; letter-spacing: 0.2em;">СТУЛ КАКОЙ-ТО МАРКИ</p></a>
+                        <a href="#" style="text-decoration: none; color:black"><p class="chair-cart-name">СТУЛ КАКОЙ-ТО МАРКИ</p></a>
                         <div class="info-product">
-                            <p style="font-family: Futura Light Regular; font-size: 10px; opacity:0.4; letter-spacing: 0.1em;">АРТ. 42342347</p>
-                            <p style="font-family: Futura Light Regular; font-size: 10px; opacity:0.4; letter-spacing: 0.1em;">ПРОИЗВОДИТЕЛЬ: <a href=""><b style="font-family: Futura Light Regular; font-size: 10px;">KOLBINS</b></a></p>
+                            <p class="font-10px">АРТ. 42342347</p>
+                            <p class="font-10px chair-font">ПРОИЗВОДИТЕЛЬ: <a href=""><b class="kolbins">KOLBINS</b></a></p>
                         </div>
                         <div class="price">
-                            <h2>152 810 ₽<span style="font-family: Futura New Medium;; font-size: 14px; text-decoration-line: line-through; opacity: 0.3; padding-left: 11px;">432 810 ₽</span></h2>
+                            <h2 class="h2-overflow">152 810 ₽<span class="old-price">432 810 ₽</span></h2>
                         </div>
                     </article>
 
-                    <article class="col-sm-3" style="box-shadow: -20px 24px 64px #F6F6F6;">
+                    <article class="col-sm-3" style="box-shadow: -20px 24px 64px #F6F6F6; position: relative; background-color: #fff;">
+                        <div class="in-stock"><p class="font-10px">В НАЛИЧИИ</p></div>
                         <a href=""><img src="../week4-riter/img/chair.png" alt="" ></a>
                         <a href="#"><img src="../week4-riter/img/like.png" alt="" style="float: right; cursor: pointer;"></a>
-                        <a href="#" style="text-decoration: none; color:black"><p style="font-family: Futura New ; font-size: 17px; letter-spacing: 0.2em;">СТУЛ КАКОЙ-ТО МАРКИ</p></a>
+                        <a href="#" style="text-decoration: none; color:black"><p class="chair-cart-name">СТУЛ КАКОЙ-ТО МАРКИ</p></a>
                         <div class="info-product">
-                            <p style="font-family: Futura Light Regular; font-size: 10px; opacity:0.4; letter-spacing: 0.1em;">АРТ. 42342347</p>
-                            <p style="font-family: Futura Light Regular; font-size: 10px; opacity:0.4; letter-spacing: 0.1em;">ПРОИЗВОДИТЕЛЬ: <a href=""><b style="font-family: Futura Light Regular; font-size: 10px;">KOLBINS</b></a></p>
+                            <p class="font-10px">АРТ. 42342347</p>
+                            <p class="font-10px chair-font">ПРОИЗВОДИТЕЛЬ: <a href=""><b class="kolbins">KOLBINS</b></a></p>
                         </div>
                         <div class="price">
-                            <h2>152 810 ₽<span style="font-family: Futura New Medium;; font-size: 14px; text-decoration-line: line-through; opacity: 0.3; padding-left: 11px;">432 810 ₽</span></h2>
+                            <h2 class="h2-overflow">152 810 ₽<span class="old-price">432 810 ₽</span></h2>
                         </div>
                     </article>
                 </div>
@@ -255,7 +263,7 @@
                 <div class="chair-info">
                     <p class="p1">СТУЛЬЯ, КРЕСЛА, ДИВАНЫ</p>
                     <p class="p2">Авторский дизайн, большой ассортимент и многообразие цветовой гаммы в сочетании с отличным качеством.</p>
-                    <a href=""><button class="btn-more">ПОДРОБНЕЕ</button></a>
+                    <a href=""><button class="btn more">ПОДРОБНЕЕ</button></a>
                 </div>
             </article>
 
@@ -264,7 +272,7 @@
                 <div class="chair-info">
                     <p class="p1">СТУЛЬЯ, КРЕСЛА, ДИВАНЫ</p>
                     <p class="p2">Авторский дизайн, большой ассортимент и многообразие цветовой гаммы в сочетании с отличным качеством.</p>
-                    <a href=""><button class="btn-more">ПОДРОБНЕЕ</button></a>
+                    <a href=""><button class="btn more">ПОДРОБНЕЕ</button></a>
                 </div>
             </article>
 
@@ -273,7 +281,7 @@
                 <div class="chair-info">
                     <p class="p1">СТУЛЬЯ, КРЕСЛА, ДИВАНЫ</p>
                     <p class="p2">Авторский дизайн, большой ассортимент и многообразие цветовой гаммы в сочетании с отличным качеством.</p>
-                    <a href=""><button class="btn-more">ПОДРОБНЕЕ</button></a>
+                    <a href=""><button class="btn more">ПОДРОБНЕЕ</button></a>
                 </div>
             </article>
 
@@ -282,7 +290,7 @@
                 <div class="chair-info">
                     <p class="p1">СТУЛЬЯ, КРЕСЛА, ДИВАНЫ</p>
                     <p class="p2">Авторский дизайн, большой ассортимент и многообразие цветовой гаммы в сочетании с отличным качеством.</p>
-                    <a href=""><button class="btn-more">ПОДРОБНЕЕ</button></a>
+                    <a href=""><button class="btn more">ПОДРОБНЕЕ</button></a>
                 </div>
             </article>
         </section>
@@ -290,7 +298,7 @@
         <section class="about">
             <div class="container">
                 <h5 style="text-align: center">О КОМПАНИИ RITER</h5>
-                <p class="heading">ДИЗАЙНЕРСКАЯ МЕБЕЛЬ В ИНТЕРНЕТ-МАГАЗИНЕ РИТЕР</p>
+                <p class="heading about-company">ДИЗАЙНЕРСКАЯ МЕБЕЛЬ В ИНТЕРНЕТ-МАГАЗИНЕ РИТЕР</p>
                 <div class="row" style="position:relative; justify-content: center;">
                     <div class="col col-lg-4">
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco</p>
@@ -300,8 +308,8 @@
                     <div class="col col-lg-4">
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur...</p>
                         <div class="about-more">
-                            <a href="#"><p style="font-size: 15px; font-family: GothamProMedium;">ПОДРОБНЕЕ О КОМПАНИИ</p></a>
-                            <a href="#"><img src="./img/Arrow.png" alt=""></a>
+                            <a href="#"><p style="font-size: 15px; font-family: GothamProMedium;">ПОДРОБНЕЕ О КОМПАНИИ</p>
+                            <div class="long-arrow-right"></div></a>
                         </div>
                     </div>
                 </div>
@@ -416,9 +424,9 @@
                     <div class="col-sm-5">
                         <p class = "heading">ДИЗАЙНЕРЫ ИНТЕРЬЕРА О НАС.</p>
                         <div class="row">
-                            <div class="col" style="margin-left: 10%;">
+                            <div class="col" style="margin-left: 10%; opacity: 0.4; cursor: pointer;">
                                 <a href="#"><p>ЧЕМ МЫ МОЖЕМ БЫТЬ ПОЛЕЗНЫ ДИЗАЙНЕРАМ</p></a>
-                                <a href="#"><img src="./img/Arrow.png" alt="" class="arrow"></a>
+                                <div class="long-arrow-right reviews"></div></a>
                             </div>
                         </div>
                     </div>
@@ -469,7 +477,7 @@
                     <a href=""><p style="font-family: GothamProBold; font-size: 24px;">#RITER</p></a>
                 </div>
                 <div class="col">
-                    <a href=""><button class="btn-subs">ПОДРОБНЕЕ</button></a>
+                    <a href=""><button class="btn subs">ПОДРОБНЕЕ</button></a>
                 </div>
             </div>
         </div>
@@ -486,8 +494,8 @@
                         </div>
                     </div>
                     <div class="col-sm-5">
-                        <a href="#"><p>ВСЕ НОВОСТИ</p></a>
-                        <a href="#"><img src="./img/Arrow.png" alt="" class=""></a>
+                        <a href="#"><p style="position:absolute; right: 18%; top: 57%;">ВСЕ НОВОСТИ</p>
+                        <div class="long-arrow-right blog2"></div></a>
                     </div>
                 </div>
                 <div class="row">
@@ -498,8 +506,8 @@
                             <a href="#" style="text-decoration: none; color:black"><p style="font-family: Futura New ; font-size: 17px; letter-spacing: 0.1em; padding-bottom: 10px;">НАЗВАНИЕ СТАТЬИ</p></a>
                             <p style="font-family: GothamProRegular; font-size: 13px; opacity:0.4; line-height: 19px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et</p>
                             <div class="read">
-                                <a href="#"><p>ЧИТАТЬ ДАЛЕЕ</p></a>
-                                <a href="#"><img src="./img/Arrow.png" alt="" class=""></a>
+                                <a href="#"><p>ЧИТАТЬ ДАЛЕЕ</p>
+                                <div class="long-arrow-right blog"></div></a>
                             </div>
                         </div>
                     </div>
@@ -511,8 +519,8 @@
                             <a href="#" style="text-decoration: none; color:black"><p style="font-family: Futura New ; font-size: 17px; letter-spacing: 0.1em; padding-bottom: 10px;">НАЗВАНИЕ СТАТЬИ</p></a>
                             <p style="font-family: GothamProRegular; font-size: 13px; opacity:0.4; line-height: 19px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et</p>
                             <div class="read">
-                                <a href="#"><p>ЧИТАТЬ ДАЛЕЕ</p></a>
-                                <a href="#"><img src="./img/Arrow.png" alt="" class=""></a>
+                                <a href="#"><p>ЧИТАТЬ ДАЛЕЕ</p>
+                                <div class="long-arrow-right blog"></div></a>
                             </div>
                         </div>
                     </div>
@@ -524,8 +532,8 @@
                             <a href="#" style="text-decoration: none; color:black"><p style="font-family: Futura New ; font-size: 17px; letter-spacing: 0.1em; padding-bottom: 10px;">НАЗВАНИЕ СТАТЬИ</p></a>
                             <p style="font-family: GothamProRegular; font-size: 13px; opacity:0.4; line-height: 19px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et</p>
                             <div class="read">
-                                <a href="#"><p>ЧИТАТЬ ДАЛЕЕ</p></a>
-                                <a href="#"><img src="./img/Arrow.png" alt="" class=""></a>
+                                <a href="#"><p>ЧИТАТЬ ДАЛЕЕ</p>
+                                <div class="long-arrow-right blog"></div></a>
                             </div>
                         </div>
                     </div>
