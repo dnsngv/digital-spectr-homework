@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="main.css">
+        <script type="text/javascript" src="script.js"></script>
+    </head>
+    <body onload="docReady()" onkeydown="" onkeyup="">
+        <div class="forms">
+            <form action="" id="data" onsubmit="return false;">
+                <p>Size player 1</p>
+                <input type="number" id="size1" name="size-1" >
+                <p>Size player 2</p>
+                <input type="number" id="size2" name="size-2" >
+                <p>Speed player 1</p>
+                <input type="number" id="speed1" name="speed-1" >
+                <p>Speed player 2</p>
+                <input type="number" id="speed2" name="speed-2" >
+                <button id = "btn" onclick="play()">Play</button>
+            </form>
+        </div>
+        
+        <div id="field">
+            <div class="info">
+                <h3>Size</h3>
+                <p>Player 1: <span id="sz1"></span></p>
+                <p>Player 2: <span id="sz2"></span></p>
+                <h3>Speed</h3>
+                <p>Player 1: <span id="sp1"></span></p>
+                <p>Player 2: <span id="sp2"></span></p>
+
+                <button id="reload" onclick="play()">Reload</button>
+            </div>
+            <div id="player-1"></div>
+            <div id="player-2"></div>
+        </div>
+    </body>
+</html>
