@@ -42,12 +42,29 @@ var swiper = new Swiper(".swiper-wrapper", {
 
 
 $(window).on('load', function(){
-  var swiper = new Swiper(".swiper-container", {
+  var swiper = new Swiper(".product", {
     slidesPerView: 4.4,
     spaceBetween: 30,
+    breakpoints: {
+      320: {
+        slidesPerView: 2,
+        spaceBetween: 5
+      },
+      640: {
+        slidesPerView: 2,
+        spaceBetween: 15
+      },
+      800: {
+        slidesPerView: 4.4,
+        spaceBetween: 30
+      },
+      1200: {
+        slidesPerView: 4.4,
+        spaceBetween: 30
+      }
+    },
     centeredSlides: false,
     loop: true,
-    runCallbacksOnInit: false,
     speed: 800,
     navigation: {
       nextEl: '.swiper-name-next__next',
@@ -56,13 +73,21 @@ $(window).on('load', function(){
 
   var nb_slides = swiper.params.slidesPerView;
   swiper.slideTo(Math.floor(nb_slides / 2));
-  
-  /*
-  $('.swiper-wrapper').on('click', function(e){
-    e.preventDefault();
-    console.log($(this).index());
-    swiper.slideTo($(this).index());
-    return false;
+});
+
+$(window).on('load', function(){
+  var swiperReviews = new Swiper(".reviews", {
+    slidesPerView: 3.1,
+    spaceBetween: 30,
+    centeredSlides: false,
+    loop: true,
+    speed: 800,
+    width: 1100,
+    navigation: {
+      nextEl: '.swiper-name-next__next',
+    },
   });
-  */
+
+  var nb_slides = swiperReviews.params.slidesPerView;
+  swiperReviews.slideTo(Math.floor(nb_slides / 2));
 });
