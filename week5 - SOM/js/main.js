@@ -1,7 +1,7 @@
 import Swiper from 'https://unpkg.com/swiper/swiper-bundle.esm.browser.min.js'
 
 //dropdown currency
-$(function() { // Dropdown toggle
+$(function() { 
     $('.currency-button').click(function() { $(this).next('.small-dropdown').slideToggle();
     });
     
@@ -15,7 +15,7 @@ $(function() { // Dropdown toggle
 });
 
 //dropdown profile
-$(function() { // Dropdown toggle
+$(function() { 
     $('.profile_img').click(function() { $(this).next('.big-dropdown').slideToggle();
     });
     
@@ -27,20 +27,10 @@ $(function() { // Dropdown toggle
       { $('.big-dropdown').slideUp(); }
     });
 });
-/*
-var swiper = new Swiper(".swiper-wrapper", {
-  prevButton: '.slider_nav.prev',
-  slidesPerView: 4,
-  spaceBetween: 30,
-  centeredSlides: true,
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-});
-*/
 
 
+
+//Swiper slideshow 1
 $(window).on('load', function(){
   var swiper = new Swiper(".product", {
     slidesPerView: 4.4,
@@ -75,9 +65,12 @@ $(window).on('load', function(){
   swiper.slideTo(Math.floor(nb_slides / 2));
 });
 
+
+//Swiper slideshow 2
 $(window).on('load', function(){
   var swiperReviews = new Swiper(".reviews", {
     slidesPerView: 3.1,
+    initialSlide: 10,
     spaceBetween: 30,
     centeredSlides: false,
     loop: true,

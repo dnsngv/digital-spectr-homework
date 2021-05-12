@@ -4,12 +4,16 @@
   margin-right: auto;
 }
 
-@media (min-width: 576px) {
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
   .container {
     max-width: 540px;
   }
   .block-wrapper .container {
     display: block;
+  }
+  .slider-wrapper {
+    overflow: hidden;
+    max-width: 100%;
   }
   .about {
     -ms-flex-wrap: wrap;
@@ -22,28 +26,20 @@
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
-}
-
-@media (min-width: 768px) {
-  .container {
-    max-width: 720px;
+  .about-img {
+    max-width: 16%;
   }
   .back,
   .next {
     display: none;
   }
-  .swiper-container {
-    width: 70%;
-  }
-  .footer {
-    -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
-  }
 }
 
-@media (min-width: 992px) {
-  .container {
-    max-width: 960px;
+@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
+  .block-wrapper .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 }
 
@@ -59,9 +55,14 @@
 }
 
 a {
+  cursor: pointer;
   text-decoration: none;
   -webkit-transition: 0.2s;
   transition: 0.2s;
+}
+
+a:hover {
+  opacity: 0.7;
 }
 
 .button {
@@ -76,15 +77,27 @@ a {
   font-size: 14px;
   cursor: pointer;
   padding: 0 20px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
 .red_button {
   background-color: var(--red1);
 }
 
+.red_button:hover {
+  background-color: var(--yellow);
+  color: black;
+}
+
 .border_transparent_button {
   background-color: transparent;
   border: 3px solid #ffffff;
+}
+
+.border_transparent_button:hover {
+  background-color: white;
+  color: black;
 }
 
 .dropdown {
@@ -242,6 +255,9 @@ a {
   display: -ms-flexbox;
   display: flex;
   position: relative;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .header__icon .icon_cart, .header__icon .icon_profile {
@@ -251,10 +267,16 @@ a {
   margin: 20px;
 }
 
+.header__icon .icon_cart img:hover, .header__icon .icon_profile img:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+
 .header__icon .big-dropdown {
   width: 200px;
   max-height: 215px;
   overflow-y: scroll;
+  z-index: 1;
 }
 
 .header__icon .big-dropdown::-webkit-scrollbar {
@@ -327,6 +349,7 @@ a {
 }
 
 .menu__item a:hover {
+  opacity: 1;
   color: var(--blue1);
   border-bottom: 3px solid var(--blue1);
 }
@@ -669,6 +692,10 @@ a {
 
 .rating__item {
   fill: var(--gray3);
+}
+
+.rating__item:hover {
+  fill: #dbdbdb;
 }
 
 .info-block {
