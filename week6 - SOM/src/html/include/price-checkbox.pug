@@ -1,0 +1,21 @@
+mixin menu()
+    .price-checkbox__item
+        input(type="radio" id="radio-1" name="radio" value="1").price-checkbox__item-checkbox
+        label(for="radio-1").font_400 Любая цена
+    .price-checkbox__item
+        input(type="radio" id="radio-2" name="radio" value="2" checked).price-checkbox__item-checkbox
+        label(for="radio-2").font_400 Дешевле 25$
+    .price-checkbox__item
+        input(type="radio" id="radio-3" name="radio" value="3").price-checkbox__item-checkbox
+        label(for="radio-3").font_400 От 25$ до 50$
+    .price-checkbox__item
+        input(type="radio" id="radio-4" name="radio" value="4").price-checkbox__item-checkbox
+        label(for="radio-4").font_400 От 50$ до 100$
+    .price-checkbox__item
+        input(type="radio" id="radio-5" name="radio" value="5").price-checkbox__item-checkbox
+        label(for="radio-5").font_400 Дороже 100$
+
+aside.price-checkbox.price-checkbox-wrapper
+    .price-checkbox__item
+        p.font_400 Цена
+    +menu()

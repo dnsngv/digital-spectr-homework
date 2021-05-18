@@ -1,0 +1,23 @@
+.menu {
+  display: flex;
+  justify-content: space-between;
+  &__item {
+    padding: 20px 0;
+
+    a {
+      text-decoration: none;
+      font-family: $roboto;
+      font-weight: 700;
+      font-size: 14px;
+      color: $textgray2;
+      border-bottom: 3px solid $textgray2;
+      padding: 20px 0;
+
+      &:hover {
+        opacity: 1;
+        color: $blue1;
+        border-bottom: 3px solid $blue1;
+      }
+    }
+  }
+}

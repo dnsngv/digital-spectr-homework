@@ -1,0 +1,22 @@
+.menu-dropdown {
+  display: flex;
+  position: relative;
+  z-index: 2;
+  display: none;
+
+  &__item {
+    width: 100%;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0px 20px 25px rgba(62, 75, 102, 0.2);
+
+    &-list {
+      li {
+        padding: 15px;
+        .list-2 {
+          display: none;
+        }
+      }
+    }
+  }
+}

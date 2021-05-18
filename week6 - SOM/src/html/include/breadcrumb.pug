@@ -1,0 +1,12 @@
+mixin breadcrumb(name)
+    .breadcrumb__item
+            p.breadcrumb__item-name.font_400= name
+    
+
+.container 
+    .breadcrumb
+        +breadcrumb('Свадьба')
+        .arrow
+        +breadcrumb('Товары для вечеринок')
+        .arrow
+        +breadcrumb('Декор для вечеринок')

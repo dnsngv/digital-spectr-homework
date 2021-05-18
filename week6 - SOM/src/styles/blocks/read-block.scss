@@ -1,0 +1,16 @@
+.info-block {
+  display: flex;
+  position: relative;
+  &__item {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 135px;
+    padding-left: 4%;
+    justify-content: space-evenly;
+
+    .block-img {
+      bottom: -13%;
+    }
+  }
+}

@@ -1,0 +1,29 @@
+doctype html
+html 
+    head
+        link(rel="stylesheet" href="style.css")
+    body
+        include include/header.pug
+        include include/menu.pug
+        include include/menu-dropdown.pug
+        include include/breadcrumb.pug
+
+        section.swiper-container.product.container 
+            include include/price-checkbox.pug
+            .small-wrapper   
+                .swiper
+                    .swiper__sort
+                        .swiper__sort-price
+                            p.price__item.font_400 Сначала самые дорогие
+                        .swiper__sort-revelance
+                            p.revelance__item.font_400 Самые новые
+                    include include/mixins/catalog.pug
+
+        include include/read-block.pug
+        include include/footer.pug
+        include include/footer-bottom.pug
+        
+        script(src="https://code.jquery.com/jquery-3.6.0.js") 
+        script(src="./js/main.js", type="module") 
+
+        

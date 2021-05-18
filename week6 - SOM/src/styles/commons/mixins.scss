@@ -1,0 +1,17 @@
+@mixin mobile-screen {
+  @media only screen and (min-device-width: $breakpoint-320) and (max-device-width: $breakpoint-568) {
+    @content;
+  }
+}
+
+@mixin laptops-screen {
+  @media only screen and (min-device-width: $breakpoint-1200) and (max-device-width: $breakpoint-1600) {
+    @content;
+  }
+}
+
+@mixin laptops-screen2 {
+  @media (min-width: $breakpoint-1200) {
+    @content;
+  }
+}

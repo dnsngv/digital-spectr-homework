@@ -1,0 +1,10 @@
+.footer {
+  display: flex;
+  padding: 40px 0;
+  &__item {
+    flex-basis: 700px;
+    a {
+      color: white;
+    }
+  }
+}

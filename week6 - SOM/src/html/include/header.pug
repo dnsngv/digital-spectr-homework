@@ -1,0 +1,36 @@
+header.header-wrapper
+    .container
+        .header
+            .header__logo
+                a(href="")  
+                    p.logo-big
+                        span.logo-big__red S
+                        span.logo-big__blue1 O
+                        span.logo-big__gray1 M
+                .logo-small
+                    p.logo-small__item.font_400.font_400_10px Seller
+                    p.logo-small__item.font_400.font_400_10px Online
+                    p.logo-small__item.font_400.font_400_10px Marketplace
+            
+            .header__search
+                input.search-input
+                a(href="") 
+                    img(src="./img/search.svg", alt="")
+
+            .header__currency
+                p  Currency
+                button.button.currency-button
+                ul.dropdown.small-dropdown
+                    li.small-dropdown__usa $ (USA)
+                    li.small-dropdown__eur € (EUR)
+                    li.small-dropdown__en £ (EN)
+                    li.small-dropdown__cn ¥ (CN)
+            
+            .header__icon
+                .icon_cart
+                    a(href="") 
+                        img(src="./img/cart.svg", alt="")
+                .icon_profile
+                    img(src="./img/profile.svg", alt="").profile_img
+                    include mixins/big-dropdown.pug
+                            

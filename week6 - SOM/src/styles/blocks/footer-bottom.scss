@@ -1,0 +1,21 @@
+.footer-bottom {
+  bottom: 0;
+  background-color: #131a22;
+
+  &__item {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+  }
+
+  .information {
+    display: flex;
+    position: absolute;
+    right: 0%;
+
+    &__item {
+      margin-left: 40px;
+    }
+  }
+}

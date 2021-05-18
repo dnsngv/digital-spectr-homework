@@ -1,0 +1,36 @@
+mixin catalog(link, description, price)
+    .swiper__item
+        .slide-img 
+            a(href="")
+                img(src= link, alt="").slide-img__item
+        .slide-info
+            p.slide-info__description.font_400.block_height_min= description
+            p.slide-info__price= price
+
++catalog('./images/product-slide1.png', 
+'Personalized dog leash hanger handmade from the base', 
+'Sold')
++catalog('./images/product-slide2.png', 
+'Stamped pet ID tag', 
+'$23.99')
++catalog('./images/product-slide3.png', 
+'Personalized Cutting Board - Engraved Cutting Board, Custom Cutting Board', 
+'$52.00')
++catalog('./images/product-slide4.png', 
+'Silicone Bamboo Mold, Chocolate Mold',
+'$45.20')
++catalog('./images/product-slide5.png', 
+'Stamped pet ID tag', 
+'$143.00')
++catalog('./images/product-slide6.png', 
+'Personalized Cutting Board - Engraved Cutting Board, Custom Cutting Board', 
+'$52.00')
++catalog('./images/product-slide7.png', 
+'Personalized Cutting Board - Engraved Cutting Board, Custom Cutting Board', 
+'$37.80')
++catalog('./images/product-slide8.png', 
+'Silicone Bamboo Mold, Chocolate Mold', 
+'$23.99')
++catalog('./images/product-slide9.png', 
+'Stamped pet ID tag', 
+'$2.30')

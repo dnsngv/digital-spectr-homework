@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html> 
+  <head>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header class="header-wrapper">
+      <div class="container">
+        <div class="header">
+          <div class="header__logo"><a href=""> 
+              <p class="logo-big"><span class="logo-big__red">S</span><span class="logo-big__blue1">O</span><span class="logo-big__gray1">M</span></p></a>
+            <div class="logo-small">
+              <p class="logo-small__item font_400 font_400_10px">Seller</p>
+              <p class="logo-small__item font_400 font_400_10px">Online</p>
+              <p class="logo-small__item font_400 font_400_10px">Marketplace</p>
+            </div>
+          </div>
+          <div class="header__search">
+            <input class="search-input"><a href=""> <img src="./img/search.svg" alt=""></a>
+          </div>
+          <div class="header__currency">
+            <p> Currency</p>
+            <button class="button currency-button"></button>
+            <ul class="dropdown small-dropdown">
+              <li class="small-dropdown__usa">$ (USA)</li>
+              <li class="small-dropdown__eur">€ (EUR)</li>
+              <li class="small-dropdown__en">£ (EN)</li>
+              <li class="small-dropdown__cn">¥ (CN)</li>
+            </ul>
+          </div>
+          <div class="header__icon">
+            <div class="icon_cart"><a href=""> <img src="./img/cart.svg" alt=""></a></div>
+            <div class="icon_profile"><img class="profile_img" src="./img/profile.svg" alt="">
+                            <ul class="dropdown big-dropdown"><a href=""> 
+                                <li>Изменить данные</li>
+                                <li>Мои товары</li>
+                                <li>Посмотреть профиль</li>
+                                <li>Избранные магазины<img src="./img/like.svg" alt=""></li>
+                                <li>Покупка и отзывы</li>
+                                <li>Настройки аккаунта</li>
+                                <li>Выйти</li></a></ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <nav class="menu-wrapper"> 
+      <div class="container"> 
+        <div class="menu">
+                  <div class="menu__item"><a href="">Leather goods</a></div>
+                  <div class="menu__item"><a href="">Wood products</a></div>
+                  <div class="menu__item"><a href="">Wedding</a></div>
+                  <div class="menu__item"><a href="">Happy Birthday</a></div>
+                  <div class="menu__item"><a href="">Toys and entertaiment</a></div>
+                  <div class="menu__item"><a href="">Art objects</a></div>
+                  <div class="menu__item"><a href="">Goods and needlework</a></div>
+        </div>
+      </div>
+    </nav>
+    <div class="container"> 
+      <div class="menu-dropdown">
+        <div class="menu-dropdown__item">
+          <ul class="menu-dropdown__item-list">
+            <li> <a class="font_400" href="">All</a></li>
+            <li> <a class="font_400" href="">Party supplies </a></li>
+            <li> <a class="font_400" href="">Invitations and cards </a>
+              <ul class="list-2">
+                <li><a class="font_400" href="">Party decor</a></li>
+                <li><a class="font_400" href="">Baking and decorating cakes </a></li>
+                <li><a class="font_400" href="">Clothes</a></li>
+              </ul>
+            </li>
+            <li> <a class="font_400" href="">Wedding decor </a></li>
+            <li> <a class="font_400" href="">Wedding gift </a></li>
+            <li> <a class="font_400" href="">Wedding accessories </a></li>
+            <li> <a class="font_400" href="">Wedding jewerly </a></li>
+            <li> <a class="font_400" href="">Wedding clothes </a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="container"> 
+      <div class="breadcrumb">
+            <div class="breadcrumb__item">
+              <p class="breadcrumb__item-name font_400">Свадьба</p>
+            </div>
+        <div class="arrow"></div>
+            <div class="breadcrumb__item">
+              <p class="breadcrumb__item-name font_400">Товары для вечеринок</p>
+            </div>
+        <div class="arrow"></div>
+            <div class="breadcrumb__item">
+              <p class="breadcrumb__item-name font_400">Декор для вечеринок</p>
+            </div>
+      </div>
+    </div>
+    <section class="swiper-container product container"> 
+      <aside class="price-checkbox price-checkbox-wrapper">
+        <div class="price-checkbox__item">
+          <p class="font_400">Цена</p>
+        </div>
+              <div class="price-checkbox__item">
+                <input class="price-checkbox__item-checkbox" type="radio" id="radio-1" name="radio" value="1">
+                <label class="font_400" for="radio-1">Любая цена</label>
+              </div>
+              <div class="price-checkbox__item">
+                <input class="price-checkbox__item-checkbox" type="radio" id="radio-2" name="radio" value="2" checked>
+                <label class="font_400" for="radio-2">Дешевле 25$</label>
+              </div>
+              <div class="price-checkbox__item">
+                <input class="price-checkbox__item-checkbox" type="radio" id="radio-3" name="radio" value="3">
+                <label class="font_400" for="radio-3">От 25$ до 50$</label>
+              </div>
+              <div class="price-checkbox__item">
+                <input class="price-checkbox__item-checkbox" type="radio" id="radio-4" name="radio" value="4">
+                <label class="font_400" for="radio-4">От 50$ до 100$</label>
+              </div>
+              <div class="price-checkbox__item">
+                <input class="price-checkbox__item-checkbox" type="radio" id="radio-5" name="radio" value="5">
+                <label class="font_400" for="radio-5">Дороже 100$</label>
+              </div>
+      </aside>
+      <div class="small-wrapper">  
+        <div class="swiper">
+          <div class="swiper__sort">
+            <div class="swiper__sort-price">
+              <p class="price__item font_400">Сначала самые дорогие</p>
+            </div>
+            <div class="swiper__sort-revelance">
+              <p class="revelance__item font_400">Самые новые</p>
+            </div>
+          </div>
+                    <div class="swiper__item">
+                      <div class="slide-img"> <a href=""><img class="slide-img__item" src="./images/product-slide1.png" alt=""></a></div>
+                      <div class="slide-info">
+                        <p class="slide-info__description font_400 block_height_min">Personalized dog leash hanger handmade from the base</p>
+                        <p class="slide-info__price">Sold</p>
+                      </div>
+                    </div>
+                    <div class="swiper__item">
+                      <div class="slide-img"> <a href=""><img class="slide-img__item" src="./images/product-slide2.png" alt=""></a></div>
+                      <div class="slide-info">
+                        <p class="slide-info__description font_400 block_height_min">Stamped pet ID tag</p>
+                        <p class="slide-info__price">$23.99</p>
+                      </div>
+                    </div>
+                    <div class="swiper__item">
+                      <div class="slide-img"> <a href=""><img class="slide-img__item" src="./images/product-slide3.png" alt=""></a></div>
+                      <div class="slide-info">
+                        <p class="slide-info__description font_400 block_height_min">Personalized Cutting Board - Engraved Cutting Board, Custom Cutting Board</p>
+                        <p class="slide-info__price">$52.00</p>
+                      </div>
+                    </div>
+                    <div class="swiper__item">
+                      <div class="slide-img"> <a href=""><img class="slide-img__item" src="./images/product-slide4.png" alt=""></a></div>
+                      <div class="slide-info">
+                        <p class="slide-info__description font_400 block_height_min">Silicone Bamboo Mold, Chocolate Mold</p>
+                        <p class="slide-info__price">$45.20</p>
+                      </div>
+                    </div>
+                    <div class="swiper__item">
+                      <div class="slide-img"> <a href=""><img class="slide-img__item" src="./images/product-slide5.png" alt=""></a></div>
+                      <div class="slide-info">
+                        <p class="slide-info__description font_400 block_height_min">Stamped pet ID tag</p>
+                        <p class="slide-info__price">$143.00</p>
+                      </div>
+                    </div>
+                    <div class="swiper__item">
+                      <div class="slide-img"> <a href=""><img class="slide-img__item" src="./images/product-slide6.png" alt=""></a></div>
+                      <div class="slide-info">
+                        <p class="slide-info__description font_400 block_height_min">Personalized Cutting Board - Engraved Cutting Board, Custom Cutting Board</p>
+                        <p class="slide-info__price">$52.00</p>
+                      </div>
+                    </div>
+                    <div class="swiper__item">
+                      <div class="slide-img"> <a href=""><img class="slide-img__item" src="./images/product-slide7.png" alt=""></a></div>
+                      <div class="slide-info">
+                        <p class="slide-info__description font_400 block_height_min">Personalized Cutting Board - Engraved Cutting Board, Custom Cutting Board</p>
+                        <p class="slide-info__price">$37.80</p>
+                      </div>
+                    </div>
+                    <div class="swiper__item">
+                      <div class="slide-img"> <a href=""><img class="slide-img__item" src="./images/product-slide8.png" alt=""></a></div>
+                      <div class="slide-info">
+                        <p class="slide-info__description font_400 block_height_min">Silicone Bamboo Mold, Chocolate Mold</p>
+                        <p class="slide-info__price">$23.99</p>
+                      </div>
+                    </div>
+                    <div class="swiper__item">
+                      <div class="slide-img"> <a href=""><img class="slide-img__item" src="./images/product-slide9.png" alt=""></a></div>
+                      <div class="slide-info">
+                        <p class="slide-info__description font_400 block_height_min">Stamped pet ID tag</p>
+                        <p class="slide-info__price">$2.30</p>
+                      </div>
+                    </div>
+        </div>
+      </div>
+    </section>
+    <section class="read-wrapper"> 
+      <div class="container"> 
+        <div class="info-block background_blue1"> 
+          <div class="info-block__item"> 
+            <div class="info-block-text"> 
+              <p class="info-text small_white_width small_white_width_34px">What is Seller-online ?</p>
+            </div>
+          </div>
+          <div class="info-block__item"><img class="block-img position_absolute" src="./images/people2.svg" alt=""></div>
+          <div class="info-block__item">
+            <button class="button button_border_transparent">Read more</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="footer-wrapper">
+      <div class="container"> 
+        <div class="footer"> 
+          <div class="footer__item"> <a href=""> 
+              <p class="footer-text font_800_montserrat font_800_montserrat_18px">Store </p></a><a href=""> 
+              <p class="footer-text font_400 color_gray">Подарочные сертификаты</p></a><a href=""> 
+              <p class="footer-text font_400 color_gray">Seller-online блог</p></a></div>
+          <div class="footer__item"> <a href=""> 
+              <p class="footer-text font_800_montserrat font_800_montserrat_18px">Sell </p></a><a href=""> 
+              <p class="footer-text font_400 color_gray">Sell on SOM</p></a><a href=""> 
+              <p class="footer-text font_400 color_gray">Forums</p></a></div>
+          <div class="footer__item"> <a href=""> 
+              <p class="footer-text font_800_montserrat font_800_montserrat_18px">About </p></a><a href=""> 
+              <p class="footer-text font_400 color_gray">Seller-online, inc.</p></a><a href=""> 
+              <p class="footer-text font_400 color_gray">Policies</p></a><a href=""> 
+              <p class="footer-text font_800_montserrat font_800_montserrat_18px">Investors </p></a><a href=""> 
+              <p class="footer-text font_400 color_gray">Careers</p></a><a href=""> 
+              <p class="footer-text font_400 color_gray">Press</p></a><a href=""> 
+              <p class="footer-text font_400 color_gray">Impact</p></a><a href=""> 
+              <p class="footer-text font_400 color_gray">Legal imprint</p></a></div>
+          <div class="footer__item"> <a href=""> 
+              <p class="footer-text font_800_montserrat font_800_montserrat_18px">Follow SOM </p></a><a href=""> 
+              <p class="footer-text font_400 color_gray">Facebook</p></a><a href=""> 
+              <p class="footer-text font_400 color_gray">Instagram</p></a><a href=""> 
+              <p class="footer-text font_800_montserrat font_800_montserrat_18px">Pinterest </p></a><a href=""> 
+              <p class="footer-text font_400 color_gray">Twitter</p></a></div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer-bottom"> 
+      <div class="container"> 
+        <div class="footer-bottom__item"> 
+          <div class="header__logo"> <a href="">
+              <p class="logo-big"><span class="logo-big__red">S </span><span class="logo-big__blue1">O </span><span class="logo-big__white">M </span></p></a>
+            <div class="logo-small"> 
+              <p class="font_400 color_gray5 margin-left">© 2019 Solma</p>
+            </div>
+          </div>
+          <div class="information"> <a href="">
+              <p class="information__item font_400 color_gray5">Terms of Use</p></a><a href="">
+              <p class="information__item font_400 color_gray5">Privacy</p></a><a href="">
+              <p class="information__item font_400 color_gray5">Interest-based ads</p></a></div>
+        </div>
+      </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"> </script>
+    <script src="./js/main.js" type="module"> </script>
+  </body>
+</html>

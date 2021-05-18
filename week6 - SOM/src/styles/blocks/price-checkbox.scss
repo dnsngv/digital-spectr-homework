@@ -1,0 +1,56 @@
+.price-checkbox-wrapper {
+  width: 15%;
+}
+
+.price-checkbox {
+  &__item:last-child {
+    border-bottom: 1px solid #e1e0e0;
+    padding-bottom: 30px;
+  }
+  &__item {
+    padding: 12px 0px;
+
+    p {
+      font-weight: 600;
+    }
+
+    & input[type="radio"] {
+      display: none;
+
+      &:checked {
+        background-color: black;
+      }
+    }
+    & label {
+      display: inline-block;
+      cursor: pointer;
+      position: relative;
+      padding-left: 22%;
+      line-height: 18px;
+      user-select: none;
+
+      &:hover:before {
+        opacity: 0.7;
+      }
+
+      &::before {
+        content: "";
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        left: 0;
+        top: -10%;
+        border: 2px solid $textgray4;
+        border-radius: 30px;
+        background-color: white;
+        transition: 0.2s;
+      }
+    }
+    & input[type="radio"]:checked ~ label::before {
+      background: url(../build/img/check-input.svg) no-repeat;
+      background-position: 50% 42%;
+      border: 2px solid $blue1;
+    }
+  }
+}
