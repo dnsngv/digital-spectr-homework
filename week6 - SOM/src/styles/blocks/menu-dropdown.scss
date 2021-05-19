@@ -11,10 +11,39 @@
     box-shadow: 0px 20px 25px rgba(62, 75, 102, 0.2);
 
     &-list {
+      position: relative;
       li {
         padding: 15px;
         .list-2 {
+          position: absolute;
+          top: 0;
+          left: 25%;
           display: none;
+        }
+
+        a {
+          &:hover {
+            border-bottom: 3px solid $blue1;
+          }
+        }
+
+        &:hover {
+          color: $blue1;
+        }
+      }
+    }
+    .list-2 {
+      li {
+        color: black;
+
+        a {
+          &:hover {
+            border-bottom: 3px solid $blue1;
+          }
+        }
+
+        &:hover {
+          color: $blue1;
         }
       }
     }

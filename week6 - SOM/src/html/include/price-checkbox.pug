@@ -1,21 +1,17 @@
-mixin menu()
+mixin input(radioID, visible, val)
     .price-checkbox__item
-        input(type="radio" id="radio-1" name="radio" value="1").price-checkbox__item-checkbox
-        label(for="radio-1").font_400 Любая цена
-    .price-checkbox__item
-        input(type="radio" id="radio-2" name="radio" value="2" checked).price-checkbox__item-checkbox
-        label(for="radio-2").font_400 Дешевле 25$
-    .price-checkbox__item
-        input(type="radio" id="radio-3" name="radio" value="3").price-checkbox__item-checkbox
-        label(for="radio-3").font_400 От 25$ до 50$
-    .price-checkbox__item
-        input(type="radio" id="radio-4" name="radio" value="4").price-checkbox__item-checkbox
-        label(for="radio-4").font_400 От 50$ до 100$
-    .price-checkbox__item
-        input(type="radio" id="radio-5" name="radio" value="5").price-checkbox__item-checkbox
-        label(for="radio-5").font_400 Дороже 100$
+        input(type="radio" id= radioID name="radio" value= val).price-checkbox__item-checkbox
+        label(for= radioID).font_400= visible
 
 aside.price-checkbox.price-checkbox-wrapper
     .price-checkbox__item
         p.font_400 Цена
-    +menu()
+    +input('radio-1', 'Любая цена', '1')
+    +input('radio-2', 'Дешевле 25$', '2')
+    +input('radio-3', 'От 25$ до 50$', '3')
+    +input('radio-4', 'От 50$ до 100$', '4')
+    +input('radio-5', 'Дороже 100$', '5')
+
+    .price-checkbox__item
+        input(type="checkbox" id= "checkbox-6" name="radio" value="6").price-checkbox__item-checkbox
+        label(for="checkbox-6").font_400 Распродажа

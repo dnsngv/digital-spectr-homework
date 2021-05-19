@@ -1,3 +1,14 @@
+mixin menu(name, elClass)
+    .menu__item(class= elClass)
+        a= name
+    
 nav.menu-wrapper 
     .container 
-        include mixins/menu-mixin.pug
+        .menu
+            +menu("Leather goods", '1')
+            +menu("Wood products", '2')
+            +menu("Wedding", '3')
+            +menu("Happy Birthday", '4')
+            +menu("Toys and entertaiment", '5')
+            +menu("Art objects", '6')
+            +menu("Goods and needlework", '7')

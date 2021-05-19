@@ -4,6 +4,10 @@
   justify-content: space-between;
   border-bottom: 1px solid #e1e0e0;
 
+  @include mobile-screen {
+    flex-direction: column;
+  }
+
   &-container.product {
     border-bottom: 1px dashed #e1e0e0;
     display: flex;
